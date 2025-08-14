@@ -19,4 +19,5 @@ func main() {
 		fmt.Println("i =", 100/i)
 	}
 	fmt.Println("this is the first try,hello GO")
+	Day001()
 }
