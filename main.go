@@ -8,5 +8,6 @@ import "fmt"
 func main() {
 	fmt.Println("function main")
 	//Day001()
-	Day002()
+	//Day002()
+	Day003()
 }
