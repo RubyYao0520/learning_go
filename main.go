@@ -9,5 +9,6 @@ func main() {
 	fmt.Println("function main")
 	//Day001()
 	//Day002()
-	Day003()
+	//Day003()
+	Day004()
 }
