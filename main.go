@@ -1,18 +1,17 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"learning/lib1"
+	"learning/lib2"
+)
 
 //TIP <p>To run your code, right-click the code and select <b>Run</b>.</p> <p>Alternatively, click
 // the <icon src="AllIcons.Actions.Execute"/> icon in the gutter and select the <b>Run</b> menu item from here.</p>
 
 func main() {
 	fmt.Println("function main")
-	//Day001()
-	//Day002()
-	//Day003()
-	//Day004()
-	//Day005()
-	//Day006()
-	//Day007()
-	Day008()
+	Day009()
+	lib1.Lib1Test()
+	lib2.Lib2Test()
 }
