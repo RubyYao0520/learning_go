@@ -14,4 +14,12 @@ func main() {
 	Day009()
 	lib1.Lib1Test()
 	lib2.Lib2Test()
+
+	//写入defer关键字
+	//表示函数调用结束前
+	//多个defer使用栈的形式
+	//defer在return之后调用
+	defer fmt.Println("main end")
+	defer fmt.Println("main end2")
+	Day010()
 }
