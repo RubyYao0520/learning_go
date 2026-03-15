@@ -4,6 +4,14 @@ import "fmt"
 
 //2026/03/15
 
+func printMap(cityMap map[string]string) {
+	//参数是引用传递
+	for key, value := range cityMap {
+		fmt.Print(key, " ")
+		fmt.Println(value)
+	}
+}
+
 func Day011() {
 	//slice的声明方式
 
@@ -38,7 +46,58 @@ func Day011() {
 	fmt.Printf("len = %d", len(numbers))
 
 	//如果向一个容量已满的slice追加元素，会开辟新的内存空间，大小为cap
-
 	//copy 可以将底层数组的slice一起进行拷贝
 
+	//map的声明
+	//key是string，value是string
+
+	//第一种声明方式
+	var myMap1 map[string]string
+	if myMap1 == nil {
+		fmt.Println("myMap1 is nil")
+	}
+	//开辟空间
+	myMap1 = make(map[string]string, 10)
+
+	//扩容机制与slice相同
+	myMap1["1"] = "Python"
+	myMap1["2"] = "Java"
+	myMap1["3"] = "Rust"
+	fmt.Println(myMap1)
+
+	fmt.Println("---------")
+
+	//第二种声明方式
+	myMap2 := make(map[int]string, 5)
+	myMap2[1] = "Java"
+
+	//第三种声明方式
+	myMap3 := map[string]string{
+		"1": "Python",
+		"2": "Java",
+	}
+	fmt.Println(myMap3)
+
+	cityMap := map[string]string{
+		"China": "Beijing",
+		"Japan": "Tokyo",
+		"Korea": "Seoul",
+		"USA":   "New York",
+	}
+
+	for key, value := range cityMap {
+		fmt.Println(key)
+		fmt.Println(value)
+	}
+
+	//修改
+	cityMap["USA"] = "DC"
+	//删除
+	delete(cityMap, "Japan")
+	//遍历
+	for _, value := range cityMap {
+		fmt.Println(value)
+	}
+
+	printMap(cityMap)
 }
