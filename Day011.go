@@ -4,6 +4,12 @@ import "fmt"
 
 //2026/03/15
 
+// 定义一个结构体
+type Book struct {
+	title  string
+	author string
+}
+
 func printMap(cityMap map[string]string) {
 	//参数是引用传递
 	for key, value := range cityMap {
@@ -98,6 +104,11 @@ func Day011() {
 	for _, value := range cityMap {
 		fmt.Println(value)
 	}
-
 	printMap(cityMap)
+
+	var book1 Book
+	book1.title = "nil"
+	book1.author = "zhangsan"
+	fmt.Println(book1)
+
 }
