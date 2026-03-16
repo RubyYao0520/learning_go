@@ -19,6 +19,5 @@ func main() {
 	//defer在return之后调用
 	defer fmt.Println("main end")
 	defer fmt.Println("main end2")
-	//Day010()
-	Day011()
+	Day012()
 }
